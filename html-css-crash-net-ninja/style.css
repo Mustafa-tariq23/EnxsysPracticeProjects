@@ -1,0 +1,118 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: tahoma;
+}
+
+header{
+  text-align: center;
+  background-color: #F63232;
+  padding: 20px 0;
+  width: 100%;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+ 
+header h1{
+  background-color: #F63232;
+  padding: 20px 0;
+  color: white;
+  border: 8px solid #fff;
+  padding: 6px 12px;
+  border-radius: 36px;
+  display: inline-block;
+}
+
+.banner{
+  position: relative;
+}
+
+.banner img{
+  width: 100%;
+}
+
+.banner .welcome { 
+  position: absolute;
+  top: 30%;
+  font-size: 60px;
+  background:#FEB614;
+  color: white;
+  left: 0;
+  padding: 30px;
+}
+
+.banner .welcome span{
+  font-size: 1.4em;
+}
+
+nav{
+  background: #f4f4f4;
+  padding: 20px;
+  position: sticky;
+  top: 106px;
+  z-index: 1;
+}
+
+nav ul{
+  white-space: nowrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+nav li{
+  width: 25%;
+  display: inline-block;
+  font-size: 24px;
+}
+
+nav li a{
+  text-decoration: none;
+  color: #4B4B4B;
+}
+
+nav li a:hover{
+  text-decoration: underline;
+}
+
+main{
+  max-width: 100%;
+  width: 1200px;
+  margin: 80px auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+article h2{
+  color: #F63232;
+  font-size: 48px;
+}
+
+article p{
+  line-height: 2em;
+  color: #4B4B4B;
+}
+
+article p::first-line{
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.images{
+  text-align: center;
+  margin: 80px 0;
+  white-space: nowrap;
+}
+
+.images li{
+  display: inline-block;
+  list-style-type: none;
+  width: 40%;
+  margin: 20px 5%;
+  position: relative;
+}
+
