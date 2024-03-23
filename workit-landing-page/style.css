@@ -1,0 +1,952 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  overflow-x: hidden;
+}
+
+/* Mobile */
+
+@media (max-width: 425px){
+  .header{
+    position: relative;
+    height: 50svh;
+    background: #24053e;  
+  }
+
+  .header > .nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 5%;
+  }
+
+  .nav{
+    color: #fff;
+  }
+
+  .nav > .work{
+    font-size: 2rem;
+  }
+
+  .nav > .work > span{
+    font-weight: 700;
+  }
+
+  .nav > .apply{
+    border-bottom: 3px solid #43ffa1;
+    padding-bottom: 5px;
+    font-size: 1rem;
+  }
+
+  .header > svg {
+    position: absolute;
+      display: block;
+      width: calc(275% + 1.3px);
+      height: 75px;
+      top: 99%;
+  }
+
+  .shape-fill{
+    fill: #24053e;
+  }
+
+
+  .hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .hero > .headerText{
+    width: 80%;
+    max-width: 100%;
+    min-width: 70%;
+    text-align: center;
+  }
+
+  .hero .headerText > h1{
+    color: #fff;
+    font-weight: 500;
+    font: bold;
+  }
+
+  .hero .headerText > h1 > span{
+    border-bottom: 2px solid #43ffa1;
+  }
+
+  .hero .headerbutton{
+    padding: 1rem 1.2rem;
+    margin: 2rem;
+    background: #43ffa1;
+    border: none;
+    font-size: 15px;
+  }
+
+  .mobileAbsolute{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 110%;
+    width: 100%;
+    left: auto;
+    right: auto;
+  }
+
+  .mobileAbsolute > img{
+    position: absolute;
+    width: 100%;
+  }
+
+  
+  .services{
+    position: relative;
+    background: #fbf8ff;
+    padding: 10rem 2rem 2rem 2rem;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .services > .svg2 {
+      position: absolute;
+        display: block;
+        width: calc(275% + 1.3px);
+        height: 75px;
+        top: 99%;
+        transform: rotate(180deg);
+        overflow: hidden;
+  }
+
+  .svg2 > .shape-fill {
+      fill: #fbf8ff;
+  }
+
+  .item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 90vw;
+  }
+
+  .count{
+    margin: 1rem;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    border: 1px solid #999999;
+    border-radius: 20px;
+  }
+
+  .info > p{
+    color: #666565;
+    line-height: 1.5;
+    padding: 1rem;
+  }
+
+  .info > h3{
+    font-size: 1.8rem;
+  }
+
+  /* about */
+
+  
+  .about {
+      background: white;
+      margin-top: 100px;
+      display: flex;
+      flex-direction: column;
+      padding: 16px;
+  }
+
+  .about > .aboutImage {
+      position: relative;
+      min-width: 281px;
+      min-height: 281px;
+  }
+
+  .about .aboutImage > img {
+      width: 281px;
+      height: 281px;
+      object-fit: cover;
+      position: absolute;
+      bottom: -50px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      border-radius: 999px;
+  }
+
+  .aboutText{
+      height: fit-content;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #24053e;
+      z-index: 2;
+      gap: 16px;
+      padding: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+  }
+
+  .aboutText > h2{
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 48px;
+      text-align: center;
+      color: #fff;
+  }
+
+  .aboutText > p {
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 28px;
+      text-align: center;
+      color: #929292;
+      margin-bottom: 8px;
+  }
+
+  .aboutText > button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    line-height: 1.75;
+    cursor: pointer;
+    background: #44ffa1;
+    color: #24053e;
+    border: 1px solid transparent;
+    transition: 0.5 all ease;
+    max-height: 55px;
+  }
+
+}
+
+/* Tablet */
+
+@media (min-width: 426px)  and (max-width: 768px) {
+  .header{
+    position: relative;
+    height: 60vh;
+    background: #24053e;  
+  }
+
+  .header > .nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 5%;
+  }
+
+  .nav > *{
+    color: #fff;
+  }
+
+  .nav > .work{
+    font-size: 2rem;
+  }
+
+  .nav > .work > span{
+    font-weight: 700;
+  }
+
+  .nav > .apply{
+    border-bottom: 3px solid #43ffa1;
+    padding-bottom: 5px;
+    font-size: 1rem;
+  }
+
+  .header > svg {
+    position: absolute;
+      display: block;
+      width: calc(275% + 1.3px);
+      height: 75px;
+      top: 99%;
+  }
+
+  .shape-fill{
+    fill: #24053e;
+  }
+
+
+  .hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .hero > .headerText{
+    width: 43%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero .headerText > h1{
+    color: #fff;
+    font-weight: 500;
+    font: bold;
+    font-size: 2.5rem;
+  }
+
+  .hero .headerText > h1 > span{
+    border-bottom: 2px solid #43ffa1;
+  }
+
+  .hero .headerbutton{
+    padding: 1rem 1rem;
+    margin: 2rem;
+    background: #43ffa1;
+    border: none;
+    font-size: 15px;
+  }
+
+  .mobileAbsolute{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 110%;
+    width: 70%;
+    left: 15%;
+    right: auto;
+  }
+
+  .mobileAbsolute > img{
+    position: absolute;
+    width: 100%;
+  }
+
+  .item1{
+    grid-area: item1;
+  }
+  .item2{
+    grid-area: item2;
+  }
+  .item3{
+    grid-area: item3;
+  }
+
+  .services{
+  position: relative;
+  background: #fbf8ff;
+  padding: 15rem 2rem 2rem 2rem;
+  z-index: -1;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+  display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    " . item1 ."
+    " . item2 ."
+    " . item3 ."
+    ;
+  }
+
+  .services > .svg2 {
+      position: absolute;
+        display: block;
+        width: calc(275% + 1.3px);
+        height: 75px;
+        top: 99%;
+        transform: rotate(180deg);
+        overflow: hidden;
+  }
+
+  .svg2 > .shape-fill {
+      fill: #fbf8ff;
+  }
+
+  .item{
+    position: relative;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+  }
+
+  .count{
+    margin: 1rem;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    border: 1px solid #999999;
+    border-radius: 20px;
+  }
+
+  .info{
+    text-align: left;
+    width: 70svw;
+  }
+
+  .info > p{
+    color: #666565;
+    line-height: 1.5;
+    padding: 1rem 0 ;
+  }
+
+  .info > h3{
+    font-size: 1.8rem;
+  }
+
+  .about {
+    background: white;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .about > .aboutImage {
+    position: relative;
+    min-width: 281px;
+    min-height: 281px;
+    left: 0;
+  }
+  
+  .about .aboutImage > img {
+    width: 281px;
+    height: 281px;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    right: 0;
+    border-radius: 999px;
+    margin: 2rem;
+  }
+
+
+  .aboutText{
+    height: fit-content;
+    max-width: fit-content;
+    width: 75%;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #24053e;
+    z-index: 2;
+    gap: 8px;
+    padding: 48px 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    left: 25%;
+    top: -2rem;
+  }
+
+  .aboutText > h2{
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 48px;
+      text-align: center;
+      color: #fff;
+  }
+
+  .aboutText > p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 28px;
+      text-align: center;
+      color: #929292;
+      margin-bottom: 8px;
+  }
+
+  .aboutText > button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    line-height: 1.75;
+    cursor: pointer;
+    background: #44ffa1;
+    color: #24053e;
+    border: 1px solid transparent;
+    transition: 0.5 all ease;
+    max-height: 55px;
+  }
+
+}
+
+/* Laptop */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .header{
+    position: relative;
+    height: 100vh;
+    background: #24053e;  
+  }
+
+  .header > .nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 10%;
+  }
+
+  .nav > *{
+    color: #fff;
+  }
+
+  .nav > .work{
+    font-size: 2.5rem;
+  }
+
+  .nav > .work > span{
+    font-weight: 700;
+  }
+
+  .nav > .apply{
+    border-bottom: 3px solid #43ffa1;
+    padding-bottom: 5px;
+    font-size: 1.5rem;
+  }
+
+  .header > svg {
+    position: absolute;
+      display: block;
+      width: calc(275% + 1.3px);
+      height: 75px;
+      top: 99%;
+  }
+
+  .shape-fill{
+    fill: #24053e;
+  }
+
+
+  .hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .hero > .headerText{
+    width: 50%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero .headerText > h1{
+    color: #fff;
+    font-weight: 500;
+    font: bold;
+    font-size: 4rem;
+  }
+
+  .hero .headerText > h1 > span{
+    border-bottom: 2px solid #43ffa1;
+  }
+
+  .hero .headerbutton{
+    padding: 1.5rem 1.5rem;
+    margin: 2rem;
+    background: #43ffa1;
+    border: none;
+    font-size: 20px;
+  }
+
+  .mobileAbsolute{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 110%;
+    width: 70vw;
+    left: 15%;
+    right: auto;
+  }
+
+  .mobileAbsolute > img{
+    position: absolute;
+    width: 100%;
+  }
+  .services{
+  position: relative;
+  background: #fbf8ff;
+  padding: 15rem 2rem 2rem 2rem;
+  z-index: -1;
+  /* height: 70vh; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+  }
+
+  .services > .svg2 {
+      position: absolute;
+        display: block;
+        width: calc(275% + 1.3px);
+        height: 75px;
+        top: 99%;
+        transform: rotate(180deg);
+        overflow: hidden;
+  }
+
+  .svg2 > .shape-fill {
+      fill: #fbf8ff;
+  }
+
+  .item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 30%;
+  }
+
+  .count{
+    margin: 1rem;
+    width: 2rem; 
+    height: 2rem;
+    line-height: 2rem;
+    border: 1px solid #999999;
+    border-radius: 20px;
+  }
+
+  .info > p{
+    color: #666565;
+    line-height: 1.5;
+    padding: 1rem;
+  }
+
+  .info > h3{
+    font-size: 1.8rem;
+  }
+
+  .about {
+    background: white;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 7rem 2rem 5rem;
+  }
+
+  .about > .aboutImage {
+    position: relative;
+    min-width: 350px;
+    min-height: 350px;
+    left: 0;
+  }
+  
+  .about .aboutImage > img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    right: 0;
+    border-radius: 999px;
+    margin: 2rem;
+  }
+
+
+  .aboutText{
+    height: fit-content;
+    max-width: fit-content;
+    width: 60%;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #24053e;
+    z-index: 2;
+    gap: 8px;
+    padding: 48px 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    left: 25%;
+    top: -2rem;
+  }
+
+  .aboutText > h2{
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 48px;
+      text-align: center;
+      color: #fff;
+  }
+
+  .aboutText > p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 28px;
+      text-align: center;
+      color: #929292;
+      margin-bottom: 8px;
+  }
+
+  .aboutText > button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    line-height: 1.75;
+    cursor: pointer;
+    background: #44ffa1;
+    color: #24053e;
+    border: 1px solid transparent;
+    transition: 0.5 all ease;
+    max-height: 55px;
+  }
+}
+
+/* Extra large Screen */
+
+@media (min-width: 1025px) {
+  .header{
+    position: relative;
+    height: 100vh;
+    background: #24053e;  
+  }
+
+  .header > .nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 10%;
+  }
+
+  .nav > *{
+    color: #fff;
+  }
+
+  .nav > .work{
+    font-size: 2.5rem;
+  }
+
+  .nav > .work > span{
+    font-weight: 700;
+  }
+
+  .nav > .apply{
+    border-bottom: 3px solid #43ffa1;
+    padding-bottom: 5px;
+    font-size: 1.5rem;
+  }
+
+  .header > svg {
+    position: absolute;
+      display: block;
+      width: calc(275% + 1.3px);
+      height: 75px;
+      top: 99%;
+  }
+
+  .shape-fill{
+    fill: #24053e;
+  }
+
+
+  .hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .hero > .headerText{
+    width: 44%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero .headerText > h1{
+    color: #fff;
+    font-weight: 500;
+    font: bold;
+    font-size: 5rem;
+    padding: 5rem 0 0 0;
+  }
+
+  .hero .headerText > h1 > span{
+    border-bottom: 2px solid #43ffa1;
+  }
+
+  .hero .headerbutton{
+    padding: 1.5rem 1.5rem;
+    margin: 2rem;
+    background: #43ffa1;
+    border: none;
+    font-size: 20px;
+  }
+
+  .mobileAbsolute{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 110%;
+    width: 50vw;
+    left: 25%;
+    right: auto;
+  }
+
+  .mobileAbsolute > img{
+    position: absolute;
+    width: 100%;
+  }
+  .services{
+  position: relative;
+  background: #fbf8ff;
+  padding: 15rem 2rem 2rem 2rem;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+  }
+
+  .services > .svg2 {
+      position: absolute;
+        display: block;
+        width: calc(275% + 1.3px);
+        height: 75px;
+        top: 99%;
+        transform: rotate(180deg);
+        overflow: hidden;
+  }
+
+  .svg2 > .shape-fill {
+      fill: #fbf8ff;
+  }
+
+  .item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 30%;
+  }
+
+  .count{
+    margin: 1rem;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    border: 1px solid #999999;
+    border-radius: 20px;
+  }
+
+  .info > p{
+    color: #666565;
+    line-height: 1.5;
+    padding: 1rem;
+  }
+
+  .info > h3{
+    font-size: 1.8rem;
+  }
+
+  .about {
+    background: white;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 17rem 2rem 10rem;
+    position: relative;
+    left: -10rem;
+  }
+
+  .about > .aboutImage {
+    position: relative;
+    min-width: 350px;
+    min-height: 350px;
+    left: 0;
+  }
+  
+  .about .aboutImage > img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    position: absolute;
+    left: 0rem;
+    right: 0;
+    border-radius: 999px;
+    margin: 2rem 0 ;
+  }
+
+
+  .aboutText{
+    height: fit-content;
+    max-width: fit-content;
+    width: 50%;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #24053e;
+    z-index: 2;
+    gap: 8px;
+    padding: 48px 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    left: 25%;
+    top: -2rem;
+  }
+
+  .aboutText > h2{
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 48px;
+      text-align: center;
+      color: #fff;
+  }
+
+  .aboutText > p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 28px;
+      text-align: center;
+      color: #929292;
+      margin-bottom: 8px;
+  }
+
+  .aboutText > button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    line-height: 1.75;
+    cursor: pointer;
+    background: #44ffa1;
+    color: #24053e;
+    border: 1px solid transparent;
+    transition: 0.5 all ease;
+    max-height: 55px;
+  }
+}
+
+.footer > .workit {
+  font-size: 2rem;
+}
+
+.footer > .workit > span{
+  font-weight: 700;
+}
+
+.footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5rem 0;
+}
+
+.socialIcons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 2rem 0 0 0;
+}
