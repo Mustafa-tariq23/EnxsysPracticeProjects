@@ -1,3 +1,4 @@
+
 *{
   margin: 0;
   padding: 0;
@@ -765,7 +766,6 @@ html, body{
     font-weight: 500;
     font: bold;
     font-size: 5rem;
-    padding: 5rem 0 0 0;
   }
 
   .hero .headerText > h1 > span{
@@ -857,7 +857,6 @@ html, body{
     align-items: center;
     padding: 2rem 17rem 2rem 10rem;
     position: relative;
-    left: -10rem;
   }
 
   .about > .aboutImage {
