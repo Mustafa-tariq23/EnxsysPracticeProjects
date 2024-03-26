@@ -1,0 +1,72 @@
+$primaryBtn: #000;
+$primaryText: #f0f0f0;
+
+@mixin flex-center ($direction, $gap) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $direction;
+  gap: $gap;
+  @content;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+.parent-container{
+  @include flex-center(row, 2rem);
+  height: 100vh;
+  padding: 5rem;
+}
+
+.text-section{
+  @include flex-center(column, 2rem);
+  min-width: 2ch;
+  text-align: center;
+  transform: translateY(-3rem);
+  color: #f0f0f0;
+
+  &.text-section>button {
+      padding: 1rem 2rem;
+      background: #000;
+      color: #f0f0f0;
+      text-transform: capitalize;
+      border: none;
+    }
+
+  &.text-section>p {
+    padding: 0 2rem;
+    width: 30ch;
+    
+  }
+}
+
+.child{
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+
+  &.child>img {
+      width: 300px;
+      height: 400px;
+      object-fit: cover;
+    }
+
+  &.child:hover .text-section {
+    transform: translateY(-270px);
+    transition: all .5s linear .2s;
+  
+    &.text-section>p,
+    button {
+      opacity: 1;
+    }
+  }
+}
+
+.text-section > p, button{
+  opacity: 0;
+}
