@@ -40,6 +40,7 @@
 .child {
   width: 300px;
   height: 400px;
+  overflow: hidden;
 }
 .child.child > img {
   width: 300px;

@@ -27,7 +27,6 @@ $primaryText: #f0f0f0;
   @include flex-center(column, 2rem);
   min-width: 2ch;
   text-align: center;
-  // transform: translateY(-500px);
   color: #f0f0f0;
 
   &.text-section>button {
@@ -48,7 +47,7 @@ $primaryText: #f0f0f0;
 .child{
   width: 300px;
   height: 400px;
-  // overflow: hidden;
+  overflow: hidden;
 
   &.child>img {
       width: 300px;
