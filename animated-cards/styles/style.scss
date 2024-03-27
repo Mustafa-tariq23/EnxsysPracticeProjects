@@ -67,6 +67,12 @@ $primaryText: #f0f0f0;
   }
 }
 
+.child:hover img {
+  transform: scale(1.1);
+  transition: all 0.5s linear 0.2s;
+  opacity: 0.9;
+}
+
 .text-section > p, button{
   opacity: 0;
 }
