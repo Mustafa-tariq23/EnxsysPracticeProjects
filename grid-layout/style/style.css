@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.parent {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+  background: #edf2f8;
+}
+
+.child {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 4px 4px 10px rgba(44, 44, 44, 0.2);
+}
+.child.child-1 {
+  background-color: #7542c8;
+}
+.child.child-1.child-1 > .img-section > .about > h4 {
+  color: #fff;
+}
+.child.child-2 {
+  background-color: #48566b;
+}
+.child.child-2.child-2 > .img-section > .about > h4 {
+  color: #fff;
+}
+.child.child-3 {
+  background-color: #fff;
+  color: #48566b;
+}
+.child.child-4 {
+  background-color: #fff;
+}
+.child.child-5 {
+  background-color: #19212e;
+}
+.child.child-5.child-5 > .img-section > .about > h4 {
+  color: #fff;
+}
+
+.child > .img-section {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.text-section {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+}
+.text-section.text-section > h2 {
+  color: #fcf0f0;
+}
+.text-section.text-section > p {
+  color: #b4b4b4;
+  font-weight: 700;
+}
+
+.child-3 > .text-section > h2 {
+  color: #546074;
+}
+
+.about > p {
+  color: #a19f9f;
+  font-size: 14px;
+}
+
+.child-3 > .text-section > h2 {
+  color: #546074;
+}
+
+.child-4 > .text-section > h2 {
+  color: #546074;
+}
+
+.img-section > img {
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.parent {
+  display: grid;
+  grid-template-areas: "child-1 child-1 child-1 child-1" "child-2 child-2 child-2 child-2" "child-3 child-3 child-3 child-3" "child-4 child-4 child-4 child-4" "child-5 child-5 child-5 child-5";
+}
+
+.child-1 {
+  grid-area: child-1;
+}
+
+.child-2 {
+  grid-area: child-2;
+}
+
+.child-3 {
+  grid-area: child-3;
+}
+
+.child-4 {
+  grid-area: child-4;
+}
+
+.child-5 {
+  grid-area: child-5;
+}
+
+@media (min-width: 426px) and (max-width: 860px) {
+  .parent {
+    display: grid;
+    grid-template-areas: "child-1 child-1 child-1 child-1" "child-2 child-2 child-3 child-3" "child-4 child-4 child-3 child-3" "child-5 child-5 child-5 child-5";
+    padding: 2rem;
+  }
+}
+@media (min-width: 861px) and (max-width: 1200px) {
+  .parent {
+    display: grid;
+    grid-template-areas: "child-1 child-1 child-1 child-2" "child-3 child-3 child-3 child-3" "child-4 child-5 child-5 child-5";
+    padding: 2rem;
+  }
+}
+@media (min-width: 1201px) {
+  .parent {
+    display: grid;
+    grid-template-areas: "child-1 child-1 child-2 child-3" "child-4 child-5 child-5 child-3";
+    padding: 4rem;
+  }
+}/*# sourceMappingURL=style.css.map */
