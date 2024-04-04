@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+@mixin custom-button($padding, $color, $background) {
+  padding: $padding;
+  background-color: $background;
+  border: none;
+  border-radius: 30px;
+  color: $color;
+}
+
+@mixin flex-center($flex-direction, $gap, $justify) {
+  display: flex;
+  align-items: center;
+  justify-content: $justify;
+  flex-direction: $flex-direction;
+  gap: $gap;
+}
+
+// header section
+
+.header {
+  background-image: url("../images/img_1.jpg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100svh;
+  position: relative;
+  z-index: 1;
+  &.header::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+}
+
+// navbar
+
+.navbar {
+  @include flex-center(row, 2rem, space-between);
+  padding: 3rem 6rem;
+  color: #fff;
+  &.navbar .section1 {
+    z-index: 10;
+    font-size: 1.5rem;
+  }
+  &.navbar .section2 > ul {
+    @include flex-center(row, 2rem, space-between);
+    list-style: none;
+    color: rgb(187, 185, 185);
+  }
+  &.navbar .section2 > ul > li:hover {
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s linear;
+  }
+  &.navbar .section2 > ul > .li-item-1 {
+    color: #fff;
+  }
+  &.navbar .section3 {
+    @include flex-center(row, 0, center);
+    &.section3 > .svg > img {
+      background-color: transparent;
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+  }
+}
+.hero-section {
+  @include flex-center(column, 3rem, center);
+  margin-top: -3rem;
+  height: 100%;
+  &.hero-section .content {
+    @include flex-center(column, 3rem, center);
+    width: 60%;
+    flex: 0 0 auto;
+    &.content h1 {
+      font-size: 50px;
+      font-weight: 700;
+      color: #fff;
+      text-align: center;
+    }
+    &.content button {
+      @include custom-button(15px 30px, #fff, #00917c);
+      font-size: 14px;
+    }
+  }
+}
+
+// form-section
+
+.outer-form {
+  @include flex-center(row, 0, center);
+}
+
+.form-section {
+  background-color: #fff;
+  padding: 2rem 3rem;
+  @include flex-center(row, 2rem, center);
+  margin: 0 auto;
+  bottom: -5rem;
+  z-index: 1;
+  position: absolute;
+  width: 90svw;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.1);
+
+  &.form-section > .item {
+    @include custom-button(15px 15px, black, #f8f9fa);
+    @include flex-center(row, 0, space-around);
+    width: 25%;
+  }
+  &.form-section .item-4 {
+    @include custom-button(none, #fff, #00917c);
+  }
+}
+
+// services-section
+
+.services-section {
+  background-color: #f8f9fa;
+  padding: 10rem 0;
+
+  &.services-section .title {
+    font-size: 1.5rem;
+    margin: 0 3rem;
+    font-weight: bold;
+    color: #00917c;
+    font-family: "work_sans", sans-serif;
+  }
+
+  &.services-section .cards-section {
+    @include flex-center(row, 2rem, space-between);
+    padding: 5rem;
+
+    &.cards-section .card {
+      @include flex-center(column, 2rem, space-between);
+      height: 300px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.1);
+      padding: 50px 50px 100px 50px;
+      height: fit-content;
+      &.card svg{
+        color: #00917c;
+      }
+      
+    }
+  }
+}
