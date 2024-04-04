@@ -1,0 +1,301 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+@mixin custom-button ($background-color, $border-style, $color) {
+  padding: .8rem 1rem;
+  background-color: $background-color;
+  border: $border-style;
+  border-radius: 5px;
+  color: $color;
+}
+@mixin flex-center ($flex-direction, $gap, $justify) {
+  display: flex;
+  align-items: center;
+  justify-content: $justify;
+  flex-direction: $flex-direction;
+  gap: $gap;
+}
+
+// start of actual css
+
+
+// header
+.header-section {
+  @include flex-center(column, 5rem, center);
+  padding: 2rem;
+
+  &.header-section .image-section > img {
+      border-radius: 30px
+
+    }
+}
+
+.navbar{
+  @include flex-center(row, 1rem, space-between);
+  width: 100svw;
+  padding: 1rem;
+  &.navbar > button{
+    @include custom-button(transparent, 2px solid black, black);
+    font:caption;
+    transition: all .2s cubic-bezier(0.215, 0.610, 0.355, 1);
+  }
+  &.navbar > button:hover{
+    @include custom-button(rgb(8, 13, 63), 2px solid black, white);
+  }
+  &.navbar > h2{
+    font-size: 2rem;
+  }
+}
+
+.text-and-image-section{
+    @include flex-center(column, 2rem, center);
+}
+
+.text-section{
+  @include flex-center(column, 2rem, center);
+
+  &.text-section > h5 {
+      font-size: 40px;
+      font-weight: 300;  
+    }
+    &.text-section > h5 > span {
+      font-weight: 800;
+    }
+    &.text-section > p{
+      font-size: 1rem;
+      line-height: 1.75;
+      color: #565555;
+    } 
+    &.text-section > button{
+      @include custom-button(rgb(8, 13, 63), 2px solid black, white);
+      align-self: flex-start;
+      transition: all .2s cubic-bezier(0.215, 0.610, 0.355, 1);
+    } 
+    &.text-section > button:hover{
+      @include custom-button(transparent, 2px solid black, white);
+      color: #000;
+      
+    } 
+}
+
+.data-section{
+  @include flex-center(column, 2rem, center);
+  text-align: center;
+  &.data-section .child > h2{
+    font-size: 3rem;
+  }
+  &.data-section .child > p{
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #898888;
+    letter-spacing: 2px;
+  }
+}
+
+// portfolio section
+
+.portfolio{
+  @include flex-center(column, 0, center);
+  text-align: center;
+  position: relative;
+  padding: 2rem 0 5rem 0;
+  background-color: #021138;
+  color: rgb(218, 218, 218);
+  margin-top: 15rem;
+  height: fit-content;
+  border-radius: 15px;
+
+  &.portfolio .image-section {
+    position: relative;
+    bottom: 12rem;
+    height: min-content;
+    margin-bottom: -5rem;
+  }
+  &.portfolio .portfolio-text-section {
+    @include flex-center(column, 3rem, center);
+    position: relative;
+  }
+  &.portfolio .portfolio-text-section > h3{
+    font-size: 2rem;
+    font-weight: 200;
+  }
+  &.portfolio .portfolio-text-section > h3 >span{
+    font-weight: 800;
+  }
+  &.portfolio .portfolio-text-section > p{
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #b7b6b6;
+    width: 90%;
+  }
+  &.portfolio .portfolio-text-section > .about > h5{
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  &.portfolio .portfolio-text-section > .about > p{
+    font-size: 1rem;
+    color: #898888;
+    padding: 10px 0;
+  }
+}
+
+// footer
+
+.footer-section{
+  @include flex-center(column, 2rem, center);
+  padding: 3rem 0;
+
+  &.footer-section > h2{
+    font-size: 2rem;
+  }
+  &.footer-section > p{
+    font-size: 1rem;
+    color: #898888;
+  }
+  &.footer-section > .icons{
+    @include flex-center(row, 1rem, space-between);
+    color: #4a4949;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 612px) {
+  .text-and-image-section {
+    @include flex-center(row, 2rem, center);
+    position: relative;
+    &.text-and-image-section .image-section > img{
+      height: fit-content;
+        width: 100%;
+    }
+  }
+
+  .text-section h5{
+    position: absolute;
+    top: 0;
+    width: 80%;
+    left: 0;
+  }
+
+  .text-section p {
+    margin-top: 6rem;
+  }
+  .data-section {
+    @include flex-center(row, 2rem, space-evenly);
+    width: 100%;
+    &.data-section .child > h2{
+      font-size: 2rem;
+    }
+    &.data-section .child > p{
+      font-size: 10px;
+    }
+  }
+
+  .portfolio{
+    margin: 12rem 2rem 0;
+  }
+
+  .footer-section{
+    @include flex-center(row, 2rem, space-between);
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 613px) and (max-width: 768px) {
+  .text-and-image-section {
+    @include flex-center(row, 2rem, center);
+    position: relative;
+    &.text-and-image-section .image-section > img{
+      height: fit-content;
+        width: 100%;
+    }
+  }
+
+  .text-section h5{
+    position: absolute;
+    top: 3.5rem;
+    width: 80%;
+    left: 0;
+    font-size: 3.5rem !important;
+  }
+  .text-section p {
+    margin-top: 15rem;
+  }
+  .data-section {
+    @include flex-center(row, 2rem, space-evenly);
+    width: 100%;
+    &.data-section .child>h2 {
+      font-size: 2rem;
+    }
+
+    &.data-section .child>p {
+      font-size: 10px;
+    }
+  }
+  .portfolio {
+    margin: 12rem 2rem 0;
+  }
+
+  .footer-section {
+    @include flex-center(row, 2rem, space-between);
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .header-section {
+    @include flex-center(row, 5rem, center);
+  }
+  .text-and-image-section {
+    @include flex-center(row, 2rem, center);
+    position: relative;
+    width: 550px;
+    &.text-and-image-section .image-section > img{
+      height: fit-content;
+      width: 250px;
+      height: 400px;
+    }
+  }
+
+  .text-section h5{
+    position: absolute;
+    top: 3rem;
+    width: 80%;
+    left: 0;
+    font-size: 3rem !important;
+  }
+  .text-section p {
+    margin-top: 10rem;
+  }
+  .portfolio {
+    margin: 12rem 6rem 0;
+    flex-direction: row;
+    padding: 0;
+    height: 460px;
+    &.portfolio .image-section{
+      width: 60%;
+      bottom: 4rem;
+      transform: scale(1.3);
+
+    }
+    &.portfolio .portfolio-text-section{
+      width: 40%;
+      text-align: left;
+      align-items: flex-start;
+      padding: 4rem 0;
+    }
+  }
+
+  .footer-section {
+    @include flex-center(row, 2rem, space-between);
+    // padding: 2rem;
+    margin: 0 6rem;
+  }
+}
