@@ -1,0 +1,1001 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+@mixin custom-button($padding, $color, $background) {
+  padding: $padding;
+  background-color: $background;
+  border: none;
+  border-radius: 30px;
+  color: $color;
+}
+
+@mixin flex-center($flex-direction, $gap, $justify) {
+  display: flex;
+  align-items: center;
+  justify-content: $justify;
+  flex-direction: $flex-direction;
+  gap: $gap;
+}
+
+// header section
+
+.header {
+  background-image: url("../images/img_1.jpg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100svh;
+  position: relative;
+  z-index: 1;
+  &.header::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+}
+
+// navbar
+
+.navbar {
+  @include flex-center(row, 2rem, space-between);
+  padding: 3rem 6rem;
+  color: #fff;
+  &.navbar .section1 {
+    z-index: 10;
+    font-size: 1.5rem;
+  }
+  &.navbar .section2 > ul {
+    @include flex-center(row, 2rem, space-between);
+    list-style: none;
+    color: rgb(187, 185, 185);
+  }
+  &.navbar .section2 > ul > li:hover {
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s linear;
+  }
+  &.navbar .section2 > ul > .li-item-1 {
+    color: #fff;
+  }
+  &.navbar .section3 {
+    @include flex-center(row, 0, center);
+    &.section3 > .svg > img {
+      background-color: transparent;
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+  }
+
+  &.navbar .hamburger {
+    cursor: pointer;
+    display: none;
+    &.hamburger .div {
+      width: 20px;
+      height: 2px;
+      background-color: #fff;
+      margin-bottom: 5px;
+    }
+
+    &.hamburger:hover .div {
+      margin-bottom: 6px;
+      transition: all 0.1s linear;
+    }
+  }
+}
+
+// hero section
+.hero-section {
+  @include flex-center(column, 3rem, center);
+  margin-top: -3rem;
+  height: 100%;
+  &.hero-section .content {
+    @include flex-center(column, 3rem, center);
+    width: 60%;
+    flex: 0 0 auto;
+    &.content h1 {
+      font-size: 50px;
+      font-weight: 700;
+      color: #fff;
+      text-align: center;
+    }
+    &.content button {
+      @include custom-button(15px 30px, #fff, #00917c);
+      font-size: 14px;
+    }
+  }
+}
+
+// form-section
+
+.outer-form {
+  @include flex-center(row, 0, center);
+}
+
+.form-section {
+  background-color: #fff;
+  padding: 2rem 2rem;
+  @include flex-center(row, 2rem, center);
+  margin: 0 auto;
+  bottom: -5rem;
+  z-index: 1;
+  position: absolute;
+  width: 85svw;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.1);
+
+  &.form-section > .item {
+    @include custom-button(15px 15px, black, #f8f9fa);
+    @include flex-center(row, 0, space-around);
+    width: 25%;
+    &.item > p {
+      font-size: 16px;
+      color: rgba(0, 0, 0, 0.5);
+    }
+  }
+  &.form-section .item-4 {
+    @include custom-button(none, #fff, #00917c);
+  }
+}
+
+// services-section
+
+.services-section {
+  background-color: #f8f9fa;
+  padding: 10rem 0 0;
+
+  &.services-section .title {
+    font-size: 1.5rem;
+    margin: 0 3rem;
+    padding: 0 4rem;
+    font-weight: bold;
+    color: #00917c;
+    font-family: "work_sans", sans-serif;
+    position: relative;
+    top: 5rem;
+  }
+
+  &.services-section .cards-section {
+    @include flex-center(row, 2rem, space-between);
+    padding: 5rem;
+    position: relative;
+    top: 7rem;
+
+    &.cards-section .card {
+      @include flex-center(column, 2rem, space-between);
+      height: 300px;
+      align-items: flex-start;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+      padding: 50px 50px 50px 50px;
+      height: fit-content;
+      &.card svg {
+        color: #00917c;
+      }
+      &.card .upper-section {
+        @include flex-center(column, 1rem, center);
+        align-items: flex-start;
+        &.upper-section h3 {
+          font-size: 20px;
+          font-weight: 900;
+        }
+        &.upper-section p {
+          font-size: 14px;
+          color: rgba(0, 0, 0, 0.5);
+          line-height: 1.65;
+        }
+      }
+      &.card > .learn {
+        font-size: 12px;
+        letter-spacing: 0.1rem;
+        font-weight: 900;
+        color: rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+}
+
+// about sectrion
+
+.about {
+  &.about .container {
+    @include flex-center(row, 10rem, space-between);
+    padding: 15rem 5rem;
+  }
+  &.about .image-section {
+    position: relative;
+  }
+
+  &.about .image-section img {
+    width: 50%;
+    position: relative;
+    height: 300px;
+    width: 400px;
+    overflow: hidden;
+    object-fit: cover;
+  }
+  &.about .text-section {
+    @include flex-center(column, 1.5rem, space-between);
+    align-items: flex-start;
+
+    &.text-section h3 {
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: #00917c;
+    }
+    &.text-section p {
+      font-size: 12px;
+      line-height: 1.5;
+      color: #898c8f;
+      font-family: Arial, Helvetica, sans-serif;
+      letter-spacing: 0.5px;
+    }
+  }
+  &.about .container > .image-section::before {
+    content: "";
+    top: -100px;
+    bottom: -100px;
+    background-color: #00917c;
+    width: 200%;
+    position: absolute;
+    z-index: -1;
+    left: -150%;
+  }
+}
+
+.buttons {
+  padding: 5rem;
+  &.buttons > .btn {
+    @include custom-button(10px 20px, #fff, transparent);
+    letter-spacing: 0.1rem;
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.5);
+    border: 1px #e2e0e0 solid;
+  }
+}
+
+.blog-section {
+  @include flex-center(column, 3rem, center);
+  align-items: flex-start;
+  padding: 5rem;
+
+  // cards
+  &.blog-section .card-section {
+    @include flex-center(row, 2rem, center);
+    position: relative;
+
+    // card
+    &.card-section .card {
+      position: relative;
+      box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+      background-color: #fff;
+      // img
+      &.card > img {
+        height: 50%;
+        width: 100%;
+        object-fit: cover;
+      }
+      &.card > .icon {
+        background-color: #00917c;
+        width: fit-content;
+        border-radius: 999px;
+        padding: 10px 12px;
+        position: absolute;
+        top: 45%;
+        left: 2rem;
+        right: 0;
+      }
+      &.card > .text-section {
+        @include flex-center(column, 2rem, center);
+        align-items: flex-start;
+        padding: 2rem 2rem;
+
+        &.text-section h3 {
+          font-size: 18px;
+          font-weight: 900;
+        }
+        &.text-section p {
+          color: #888;
+          font-size: 12px;
+          letter-spacing: 1px;
+          font-weight: 900;
+        }
+      }
+    }
+    // card end
+  }
+}
+
+.questions-section {
+  background-color: #00917c;
+  position: relative;
+  bottom: 12rem;
+
+  &.questions-section .buttons {
+    padding: 12rem 10rem 5rem;
+
+    &.buttons .btn {
+      border: rgba(0, 0, 0, 0.1) 1px solid;
+    }
+  }
+
+  @include flex-center(column, 2rem, center);
+
+  &.questions-section .form {
+    @include flex-center(row, 2rem, space-between);
+    width: 100%;
+    padding: 0 5rem 5rem 5rem;
+    &.form .heading {
+      width: 20%;
+      font-size: 24px;
+      font-weight: 900;
+    }
+    &.form .tags {
+      width: 80%;
+      &.tags .tag {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        margin-bottom: 10px;
+        padding: 10px;
+
+        &.tag:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+// testimonial
+
+.testimonial-section {
+  @include flex-center(column, 3rem, center);
+  background-color: #f8f9fa;
+  padding: 0 5rem 5rem;
+
+  // title
+  &.testimonial-section .title {
+    @include flex-center(row, 3rem, space-between);
+    align-items: flex-start;
+    padding: 5rem 0;
+
+    &.title > h3 {
+      color: #00917c;
+      font-size: 24px;
+      font-weight: 900;
+    }
+    &.title > p {
+      color: rgba(0, 0, 0, 0.5);
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+
+  // cards
+
+  .card-section-testimonial {
+    @include flex-center(row, 2rem, center);
+
+    &.card-section-testimonial .card {
+      box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.1);
+      position: relative;
+
+      &.card .icon {
+        background-color: #00917c;
+        width: fit-content;
+        border-radius: 999px;
+        padding: 10px 12px;
+        position: absolute;
+        top: -20px;
+        left: 2rem;
+        right: 0;
+      }
+
+      &.card .testimonal {
+        padding: 40px;
+        @include flex-center(column, 1rem, center);
+
+        &.testimonal .text-section h3 {
+          font-size: 16px;
+          color: rgba(0, 0, 0, 0.5);
+          font-family: Roboto, sans-serif;
+          line-height: 1.3;
+        }
+        &.testimonal .intro {
+          @include flex-center(row, 1rem, center);
+          align-self: flex-start;
+
+          &.intro > img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+          }
+
+          &.intro > .intro-inner {
+            &.intro-inner > h5 {
+              font-size: 14px;
+              font-family: Roboto, sans-serif;
+            }
+            &.intro-inner > p {
+              font-size: 12px;
+              font-family: Roboto, sans-serif;
+              color: rgba(0, 0, 0, 0.5);
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.instagram-section {
+  @include flex-center(column, 3rem, center);
+  align-items: flex-start;
+  padding: 5rem 0;
+
+  // title
+  &.instagram-section .title {
+    @include flex-center(row, 3rem, space-between);
+    align-items: flex-start;
+    padding: 0 5rem 0;
+    &.title > h3 {
+      align-self: flex-start;
+      color: #00917c;
+      font-size: 24px;
+      font-weight: 900;
+    }
+    &.title > p {
+      color: rgba(0, 0, 0, 0.5);
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+
+  // image section
+
+  &.instagram-section .images-section {
+    @include flex-center(row, 0, space-between);
+    background-color: white;
+
+    &.images-section img {
+      width: 25%;
+      overflow: hidden;
+      object-fit: cover;
+    }
+  }
+}
+
+// footer
+
+.footer {
+  @include flex-center(column, 5rem, space-around);
+  background-color: #f8f9fa;
+  padding: 5rem 8rem;
+
+  &.footer .section-1 {
+    @include flex-center(row, 3rem, space-between);
+    align-items: baseline;
+    width: 100%;
+
+    &.section-1 > .part {
+      width: 25%;
+
+      &.part > p {
+        margin-bottom: 10px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 14px;
+      }
+    }
+
+    &.section-1 > .part > .first {
+      color: #000 !important;
+      font-size: 1rem;
+      font-family: "Work Sans", sans-serif;
+    }
+
+    &.section-1 .part-4 > .part-5 {
+      @include flex-center(column, 1rem, center);
+      align-items: flex-start;
+
+      &.part-5 .icons {
+        @include flex-center(row, 2px, center);
+      }
+
+      &.part-5 .icons > .img {
+        height: 25px;
+        width: 25px;
+        background-color: #00917c;
+        border-radius: 50%;
+        @include flex-center(row, 2px, center);
+
+        &.img img {
+          height: 12px;
+          width: 12px;
+        }
+      }
+    }
+  }
+
+  &.footer .section-2 {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+// responsiveness
+
+@media (max-width: 990px) {
+  // title
+  .hero-section {
+    &.hero-section .content {
+      width: 70%;
+    }
+  }
+
+  // navbar
+  .navbar {
+    padding: 3rem;
+  }
+  // form
+
+  .form-section {
+    @include flex-center(column, 1rem, center);
+    bottom: -15rem;
+    width: 70svw;
+
+    &.form-section > .item {
+      @include custom-button(15px 15px, black, #f8f9fa);
+      @include flex-center(row, 0, space-between);
+      width: 100%;
+    }
+    &.form-section .item-4 {
+      @include custom-button(none, #fff, #00917c);
+    }
+  }
+
+  // Services Section
+
+  .services-section {
+    padding: 15rem 0 0;
+
+    &.services-section .title {
+      font-size: 1.5rem;
+      margin: 0 3rem;
+      padding: 0 4rem;
+      top: 5rem;
+    }
+
+    &.services-section .cards-section {
+      @include flex-center(row, 2rem, space-between);
+      padding: 5rem;
+      position: relative;
+      top: 7rem;
+      flex-wrap: wrap;
+    }
+  }
+
+  // about
+
+  .about {
+    &.about .container {
+      @include flex-center(column, 10rem, space-between);
+    }
+
+    &.about .image-section img {
+      width: 200%;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      object-fit: cover;
+    }
+    &.about .text-section {
+      @include flex-center(column, 1.5rem, space-between);
+      align-items: flex-start;
+
+      &.text-section h3 {
+        font-size: 1.5rem;
+        font-weight: 900;
+        color: #00917c;
+      }
+      &.text-section p {
+        font-size: 12px;
+        line-height: 1.5;
+        color: #898c8f;
+        font-family: Arial, Helvetica, sans-serif;
+        letter-spacing: 0.5px;
+      }
+    }
+    &.about .container > .image-section::before {
+      content: "";
+      top: -100px;
+      bottom: -100px;
+      background-color: #00917c;
+      width: 200%;
+      position: absolute;
+      z-index: -1;
+      left: -150%;
+    }
+  }
+
+  // blog section
+
+  .blog-section {
+    // cards
+    &.blog-section .card-section {
+      // card
+      &.card-section .card {
+        &.card > .icon {
+          background-color: #00917c;
+          width: fit-content;
+          border-radius: 999px;
+          padding: 10px 12px;
+          position: absolute;
+          top: 38%;
+          left: 2rem;
+          right: 0;
+        }
+        &.card > .text-section {
+          @include flex-center(column, 2rem, center);
+          align-items: flex-start;
+          padding: 2rem 1rem;
+
+          &.text-section h3 {
+            font-size: 18px;
+            font-weight: 900;
+          }
+          &.text-section p {
+            color: #888;
+            font-size: 12px;
+            letter-spacing: 1px;
+            font-weight: 900;
+          }
+        }
+      }
+      // card end
+    }
+  }
+
+  .questions-section {
+    &.questions-section .buttons {
+      padding: 12rem 3rem 5rem;
+
+      &.buttons .btn {
+        border: rgba(0, 0, 0, 0.1) 1px solid;
+      }
+    }
+    &.questions-section .form {
+      @include flex-center(column, 2rem, space-between);
+      align-items: flex-start;
+      width: 100%;
+      &.form .heading {
+        width: 100%;
+        font-size: 24px;
+        font-weight: 900;
+      }
+      &.form .tags {
+        width: 100%;
+        &.tags .tag {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+          margin-bottom: 10px;
+          padding: 10px;
+        }
+      }
+    }
+  }
+
+  // insta section
+
+  .instagram-section {
+    // title
+    &.instagram-section .title {
+      @include flex-center(column, 1rem, space-between);
+    }
+
+    // image section
+
+    &.instagram-section .images-section .img-5 {
+      display: none;
+    }
+  }
+}
+
+// responsiveness
+
+@media (max-width: 768px) {
+  // nav
+
+  .navbar {
+    padding: 3rem;
+    &.navbar .section2 {
+      display: none;
+    }
+    &.navbar .section3 {
+      display: none;
+    }
+
+    &.navbar .hamburger {
+      display: block;
+    }
+  }
+
+  // blog section
+
+  .blog-section {
+    // cards
+    &.blog-section .card-section {
+      @include flex-center(column, 2rem, center);
+      position: relative;
+
+      &.card-section .card {
+        &.card > .icon {
+          top: 45%;
+        }
+      }
+    }
+  }
+
+  .testimonial-section {
+    @include flex-center(column, 3rem, center);
+    background-color: #f8f9fa;
+    padding: 0 5rem 5rem;
+
+    // title
+    &.testimonial-section .title {
+      @include flex-center(row, 3rem, space-between);
+      align-items: flex-start;
+      padding: 5rem 0;
+
+      &.title > h3 {
+        color: #00917c;
+        font-size: 24px;
+        font-weight: 900;
+      }
+      &.title > p {
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+
+    // testimonial
+
+    &.testimonial-section .title {
+      @include flex-center(column, 1rem, space-between);
+    }
+
+    // cards
+
+    .card-section-testimonial {
+      @include flex-center(column, 2rem, center);
+    }
+  }
+
+  // insta section
+
+  
+
+  .instagram-section {
+
+    &.instagram-section .images-section {
+    &.images-section .img {
+      width: 50%;
+    }
+  }
+    // image section
+    &.instagram-section .images-section .img-4,
+    .img-3,
+    .img-5 {
+      display: none;
+    }
+  }
+
+  .footer {
+  padding: 5rem 3rem;
+  &.footer .section-1 {
+    flex-wrap: wrap;
+
+    &.section-1 .part{
+      margin-right: 2rem;
+    }
+
+    &.section-1 .part-4 > .part-5 {
+      @include flex-center(column, 1rem, center);
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-right: 0;
+      
+      &.part-5 .icons {
+        @include flex-center(row, 2px, center);
+        flex-wrap: wrap;
+      }
+
+      &.part-5 .icons > .img {
+        height: 25px;
+        width: 25px;
+        background-color: #00917c;
+        border-radius: 50%;
+        @include flex-center(row, 2px, center);
+
+        &.img img {
+          height: 12px;
+          width: 12px;
+        }
+      }
+    }
+  }
+}
+}
+
+// responsiveness
+
+@media (max-width: 575px) {
+  // title
+  .hero-section {
+    &.hero-section .content {
+      width: 100%;
+    }
+  }
+
+  // form
+
+  .form-section {
+    @include flex-center(column, 1rem, center);
+    bottom: -15rem;
+    width: 100svw;
+
+    &.form-section > .item {
+      @include custom-button(15px 15px, black, #f8f9fa);
+      @include flex-center(row, 0, space-between);
+      width: 100%;
+    }
+    &.form-section .item-4 {
+      @include custom-button(none, #fff, #00917c);
+    }
+  }
+
+  // services
+
+  .services-section {
+    &.services-section .title {
+      margin: 0 1rem;
+      padding: 0;
+      top: 5rem;
+    }
+  }
+
+  // about
+
+  .about {
+    &.about .image-section {
+      width: 140%;
+    }
+
+    &.about .text-section {
+      @include flex-center(column, 1.5rem, space-between);
+      align-items: flex-start;
+
+      &.text-section h3 {
+        font-size: 1.5rem;
+        font-weight: 900;
+        color: #00917c;
+      }
+      &.text-section p {
+        font-size: 12px;
+        line-height: 1.5;
+        color: #898c8f;
+        font-family: Arial, Helvetica, sans-serif;
+        letter-spacing: 0.5px;
+      }
+    }
+    &.about .container > .image-section::before {
+      content: "";
+      top: -100px;
+      bottom: -100px;
+      background-color: #00917c;
+      width: 200%;
+      position: absolute;
+      z-index: -1;
+      left: -150%;
+    }
+  }
+
+  .testimonial-section{
+    padding: 0 1rem 5rem;
+  }
+
+  // blog section
+
+  .blog-section {
+    padding: 3rem;
+    // cards
+    &.card-section .card {
+      &.card > .icon {
+        top: 45%;
+      }
+    }
+  }
+
+  // insta section
+  .instagram-section {
+    &.instagram-section .title{
+      padding: 0 1rem 5rem;
+    }
+    &.instagram-section .images-section {
+    &.images-section .img {
+      width: 100% ;
+    }
+  }
+    // image section
+    &.instagram-section .images-section .img-4,
+    .img-3,
+    .img-2 {
+      display: none;
+    }
+  }
+
+//   .footer {
+//   &.footer .section-1 {
+//     @include flex-center(column, 3rem, center);
+//     align-items: center;
+//     width: 100%;
+
+//     &.section-1 > .part {
+//       width: 25%;
+
+//       &.part > p {
+//         margin-bottom: 10px;
+//         color: rgba(0, 0, 0, 0.5);
+//         font-size: 14px;
+//       }
+//     }
+
+//     &.section-1 > .part > .first {
+//       color: #000 !important;
+//       font-size: 1rem;
+//       font-family: "Work Sans", sans-serif;
+//     }
+
+//     &.section-1 .part-4 > .part-5 {
+//       @include flex-center(column, 1rem, center);
+//       align-items: flex-start;
+
+//       &.part-5 .icons {
+//         @include flex-center(row, 2px, center);
+//       }
+
+//       &.part-5 .icons > .img {
+//         height: 25px;
+//         width: 25px;
+//         background-color: #00917c;
+//         border-radius: 50%;
+//         @include flex-center(row, 2px, center);
+
+//         &.img img {
+//           height: 12px;
+//           width: 12px;
+//         }
+//       }
+//     }
+//   }
+
+//   &.footer .section-2 {
+//     font-size: 12px;
+//     color: rgba(0, 0, 0, 0.5);
+//   }
+// }
+}
