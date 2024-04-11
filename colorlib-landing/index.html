@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <!-- header -->
@@ -50,8 +51,8 @@
     <!-- end header -->
 
     <!-- section-form start -->
-    <section class="outer-form">
-      <form class="form-section">
+    <section class="outer-form" >
+      <form class="form-section" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
         <div class="item-1 item">
           <p>Date Arrival</p>
           <div class="svg">
@@ -139,7 +140,7 @@
     <!-- Services-Section -->
     <section class="services-section">
       <div class="title">OUR SERVICES</div>
-      <div class="cards-section">
+      <div class="cards-section" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
         <!-- card 1 -->
         <div class="card card-1">
           <div class="upper-section">
@@ -238,17 +239,17 @@
 
     <section class="about">
       <!-- buttons -->
-      <section class="buttons">
+      <section class="buttons" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
         <button class="prev btn">Prev</button>
         <button class="Next btn">Next</button>
       </section>
       <section class="container">
         <!-- images section -->
-        <div class="image-section">
+        <div class="image-section" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
           <img src="images/img_1.jpg.webp" alt="main pic" />
         </div>
         <!-- text-section -->
-        <section class="text-section">
+        <section class="text-section" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
           <h3>ABOUT HOTELL</h3>
           <p>
             Far far away, behind the word mountains, far from the countries
@@ -279,7 +280,7 @@
       <!-- section.cards -->
       <section class="card-section">
         <!-- card-1 -->
-        <div class="card-1 card">
+        <div class="card-1 card" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
           <img src="images/img_1.jpg.webp" alt="main image" />
           <!-- icon -->
           <div class="icon">
@@ -309,7 +310,7 @@
           </div>
         </div>
         <!-- card-2 -->
-        <div class="card-2 card">
+        <div class="card-2 card" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
           <img src="images/img_1.jpg.webp" alt="main image" />
           <!-- icon -->
           <div class="icon">
@@ -339,7 +340,7 @@
           </div>
         </div>
         <!-- card-3 -->
-        <div class="card-3 card">
+        <div class="card-3 card" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
           <img src="images/img_1.jpg.webp" alt="main image" />
           <!-- icon -->
           <div class="icon">
@@ -605,7 +606,6 @@
 
     <footer class="footer">
       <div class="section-1">
-
         <div class="part-1 part">
           <p class="first">Home</p>
           <p>About us</p>
@@ -649,7 +649,7 @@
                 <img src="images/facebook-app-symbol.png" alt="facebook" />
               </div>
               <div class="img">
-                <img src="images/linkedin.png" alt="linkedin">
+                <img src="images/linkedin.png" alt="linkedin" />
               </div>
               <div class="img">
                 <img src="images/pinterest.png" alt="pinterest" />
@@ -662,8 +662,16 @@
         </div>
       </div>
       <div class="section-2">
-        Copyright ©2024 All rights reserved | This template is made with 💖 by Colorlib
+        Copyright ©2024 All rights reserved | This template is made with 💖 by
+        Colorlib
       </div>
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 3000,
+        once: true,
+      });
+    </script>
   </body>
 </html>
