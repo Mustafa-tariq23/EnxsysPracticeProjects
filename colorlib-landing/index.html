@@ -3,9 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Hotell</title>
     <link rel="stylesheet" href="./style/style.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- header -->
@@ -41,7 +47,12 @@
 
       <!-- hero section -->
       <section class="hero-section">
-        <div class="content">
+        <div
+          class="content"
+          data-aos="fade-up"
+          data-aos-duration="800"
+          data-aos-once="true"
+        >
           <h1>Once a year go someplace you've never been before.</h1>
           <button>See video</button>
         </div>
@@ -51,8 +62,13 @@
     <!-- end header -->
 
     <!-- section-form start -->
-    <section class="outer-form" >
-      <form class="form-section" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+    <section class="outer-form">
+      <form
+        class="form-section"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-once="true"
+      >
         <div class="item-1 item">
           <p>Date Arrival</p>
           <div class="svg">
@@ -139,8 +155,20 @@
 
     <!-- Services-Section -->
     <section class="services-section">
-      <div class="title">OUR SERVICES</div>
-      <div class="cards-section" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+      <div
+        class="title"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-once="true"
+      >
+        OUR SERVICES
+      </div>
+      <div
+        class="cards-section"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-once="true"
+      >
         <!-- card 1 -->
         <div class="card card-1">
           <div class="upper-section">
@@ -239,17 +267,32 @@
 
     <section class="about">
       <!-- buttons -->
-      <section class="buttons" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+      <section
+        class="buttons"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-once="true"
+      >
         <button class="prev btn">Prev</button>
         <button class="Next btn">Next</button>
       </section>
       <section class="container">
         <!-- images section -->
-        <div class="image-section" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
+        <div
+          class="image-section"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+          data-aos-once="true"
+        >
           <img src="images/img_1.jpg.webp" alt="main pic" />
         </div>
         <!-- text-section -->
-        <section class="text-section" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
+        <section
+          class="text-section"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+          data-aos-once="true"
+        >
           <h3>ABOUT HOTELL</h3>
           <p>
             Far far away, behind the word mountains, far from the countries
@@ -280,8 +323,15 @@
       <!-- section.cards -->
       <section class="card-section">
         <!-- card-1 -->
-        <div class="card-1 card" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
-          <img src="images/img_1.jpg.webp" alt="main image" />
+        <div
+          class="card-1 card"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-once="true"
+        >
+          <div class="img">
+            <img src="images/img_1.jpg.webp" alt="main image" />
+          </div>
           <!-- icon -->
           <div class="icon">
             <svg
@@ -310,8 +360,15 @@
           </div>
         </div>
         <!-- card-2 -->
-        <div class="card-2 card" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
-          <img src="images/img_1.jpg.webp" alt="main image" />
+        <div
+          class="card-2 card"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-once="true"
+        >
+          <div class="img">
+            <img src="images/img_1.jpg.webp" alt="main image" />
+          </div>
           <!-- icon -->
           <div class="icon">
             <svg
@@ -340,8 +397,15 @@
           </div>
         </div>
         <!-- card-3 -->
-        <div class="card-3 card" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
-          <img src="images/img_1.jpg.webp" alt="main image" />
+        <div
+          class="card-3 card"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-once="true"
+        >
+          <div class="img">
+            <img src="images/img_1.jpg.webp" alt="main image" />
+          </div>
           <!-- icon -->
           <div class="icon">
             <svg
@@ -393,11 +457,36 @@
         <!-- heading end -->
 
         <div class="tags">
-          <p class="tag">Is it free?</p>
-          <p class="tag">How to install this template?</p>
-          <p class="tag">Where can i get help?</p>
-        </div>
+          <div class="parent">
+            <p class="tag tag-1">Is it free?</p>
+            <div class="inner-tag">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam modi
+              voluptas asperiores saepe a architecto, deleniti rerum ex neque,
+              impedit, mollitia repudiandae nostrum temporibus libero. Velit ab
+              assumenda similique exercitationem?
+            </div>
+          </div>
 
+          <div class="parent">
+            <p class="tag tag-2">How to install this template?</p>
+            <div class="inner-tag">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto
+              temporibus quas quos illo voluptatibus tenetur, similique cumque
+              consequatur voluptas sapiente soluta adipisci velit explicabo
+              veniam optio at dicta dignissimos voluptatum!
+            </div>
+          </div>
+
+          <div class="parent">
+            <p class="tag tag-3">Where can i get help?</p>
+            <div class="inner-tag">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus
+              aliquid consequatur veritatis inventore assumenda ipsam deleniti.
+              Repudiandae placeat animi ut unde nulla odio cum id, delectus
+              quisquam, minus accusamus ratione!
+            </div>
+          </div>
+        </div>
         <!-- tag end -->
       </section>
 
@@ -569,7 +658,7 @@
       <!-- section.cards end -->
 
       <!-- button -->
-      <section class="buttons" style="padding: 0">
+      <section class="buttons-in-testimonial" style="padding: 0">
         <button class="prev btn">Prev</button>
         <button class="Next btn">Next</button>
       </section>
