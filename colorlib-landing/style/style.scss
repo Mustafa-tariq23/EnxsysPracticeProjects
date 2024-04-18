@@ -10,6 +10,10 @@ body {
   overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+  scrollbar-width: none !important;
+}
+
 @mixin custom-button($padding, $color, $background) {
   padding: $padding;
   background-color: $background;
