@@ -144,22 +144,8 @@ console.log(result);
 
 // same Name if any count.
 
-const objArr2 = {
-  name: ["ali", "saad", "ali", "ali"],
-  age: [20, 30],
-  height: [170, 180],
-};
-
 function sameNameCount (objArr) {
   let count = 0;
-
-  // for ( let i = 0; i < objArr.name.length; i++){
-  //   if(objArr.name.includes((x) => x === "ali")){
-  //     count++;
-
-      
-  //   }
-  // }
 
   Object.entries(objArr.name).forEach((name) => {
     console.log(name)
@@ -171,8 +157,6 @@ function sameNameCount (objArr) {
   return count;
 }
 
-console.log((Object.entries(objArr2.name)));
-
 console.log(
-  `the number of times name "ali" has accoured is: ${sameNameCount(objArr2)}`
+  `the number of times name "ali" has accoured is: ${sameNameCount(objArr)}`
 );
