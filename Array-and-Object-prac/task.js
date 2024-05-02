@@ -76,7 +76,7 @@ console.log(`The Values of the object are: ${Object.values(obj)}`);
 // console.log(Object.);
 
 const objArr = {
-  name: ["ali", "saad"],
+  name: ["ali", "saad", "ali", "ali"],
   age: [20, 30],
   height: [170, 180],
 };
@@ -140,3 +140,39 @@ console.log(objArr.age.indexOf(30));
 
 let result = objArr.name.find((x) => x == `ali`) ? true : false;
 console.log(result);
+
+
+// same Name if any count.
+
+const objArr2 = {
+  name: ["ali", "saad", "ali", "ali"],
+  age: [20, 30],
+  height: [170, 180],
+};
+
+function sameNameCount (objArr) {
+  let count = 0;
+
+  // for ( let i = 0; i < objArr.name.length; i++){
+  //   if(objArr.name.includes((x) => x === "ali")){
+  //     count++;
+
+      
+  //   }
+  // }
+
+  Object.entries(objArr.name).forEach((name) => {
+    console.log(name)
+    if (name[1] == 'ali') {
+      count++;
+    }
+  });
+
+  return count;
+}
+
+console.log((Object.entries(objArr2.name)));
+
+console.log(
+  `the number of times name "ali" has accoured is: ${sameNameCount(objArr2)}`
+);
