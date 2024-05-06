@@ -32,8 +32,8 @@ let amRoutes = {
       coordinateID: null,
       isIntersection: true,
       isValidated: true,
-      // time: "7:59 AM",
       time: "7:56 AM",
+      // time: "7:59 AM",
       routeName: "BSH10A",
     },
     {
@@ -67,7 +67,8 @@ let amRoutes = {
       coordinateID: null,
       isIntersection: true,
       isValidated: true,
-      time: "8:02 AM",
+      // time: "8:02 AM",
+      time: "7:56 AM",
       routeName: "BSH10A",
       timeConflict: true,
     },
@@ -105,7 +106,8 @@ let amRoutes = {
       coordinateID: null,
       isIntersection: true,
       isValidated: true,
-      time: "8:30 AM",
+      // time: "8:30 AM",
+      time: "7:56 AM",
       routeName: "BB3A",
     },
     {
@@ -156,47 +158,71 @@ let amRoutes = {
       coordinateID: null,
       isIntersection: true,
       isValidated: true,
-      time: "8:43 AM",
+      // time: "8:43 AM",
+      time: "7:59 AM",
       routeName: "BB3A",
     },
   ],
 };
 
-function compareForTime(Route) {
-  for (let i = 0; i < Route.length; i++) {
-    for (let j = 0; j < Route.length; j++) {
-      if (i == j) continue;
-      if (
-        Route[i].time === Route[j].time &&
-        Route[i].address === Route[j].address
-      ) {
-        Route.splice(j, 1);
+function CheckRoutes(Routes) {
+  for (let key in Routes) {
+    let routeKey = Routes[key];
+    let uniqueEntries = {};
+    let filteredRoute = [];
+
+    routeKey.forEach((item) => {
+      let key = `${item.time} - ${item.address}`;
+      if (!uniqueEntries[key]) {
+        uniqueEntries[key] = true;
+        filteredRoute.push(item);
       }
-    }
+    });
+    Routes[key] = filteredRoute;
   }
-  console.log(Route.length);
+  addField_reviewRequired(Routes);
 }
 
-function addIndex(Route) {
-  for (let i = 0; i < Route.length; i++) {
-    for (let j = i+1; j < Route.length; j++) {
-      if (
-        Route[i].time === Route[j].time &&
-        Route[i].address !== Route[j].address
-      ) {
-        Route[i].reviewRequired = true;
+function addField_reviewRequired(Routes) {
+  for (let key in Routes) {
+    let routeKey = Routes[key];
+    routeKey.forEach((item, index) => {
+      routeKey[index].reviewRequired = false;
+      for (let j = 0; j < routeKey.length; j++) {
+        if (
+          index !== j &&
+          item.time === routeKey[j].time &&
+          item.address !== routeKey[j].address
+        ) {
+          item.reviewRequired = true;
+          break;
+        }
       }
-      else{
-        Route[i].reviewRequired = false;
-      }
+    });
+  }
+  adding_reviewRequiredFieldAcrossRoutes(Routes);
+}
+
+
+function adding_reviewRequiredFieldAcrossRoutes(Routes){
+  const routeKeys = Object.keys(Routes);
+
+  for(let i = 0; i< routeKeys.length; i++){
+    const route1 = Routes[routeKeys[i]];
+    for(let j = i + 1; j < routeKeys.length; j++){
+      const route2 = Routes[routeKeys[j]];
+
+      route1.forEach(item1 => {
+        route2.forEach(item2 =>{
+          if(item1.time === item2.time && item1.address !== item2.address){
+            item1.reviewRequired = true;
+            item2.reviewRequired = true;
+          }
+        })
+      })
     }
   }
-  console.log(Route.length);
+  console.log(Routes);
 }
-// compareForTime(amRoutes.BSH10A);
-// compareForTime(amRoutes.BB3A);
 
-
-
-addIndex(amRoutes.BSH10A);
-addIndex(amRoutes.BB3A);
+CheckRoutes(amRoutes);
