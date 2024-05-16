@@ -1,0 +1,61 @@
+* {
+  border: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@mixin custom-button($padding, $color, $background) {
+  padding: $padding;
+  background-color: $background;
+  border: none;
+  border-radius: 30px;
+  color: $color;
+}
+
+.stopWatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  color: #fff;
+  height: 100vh;
+  gap: 3rem;
+
+  .time {
+    border: #fff 1px solid;
+    padding: 20px;
+    border-radius: 50%;
+    padding: 50px;
+    h3 {
+      height: 100px;
+      width: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .basicFunctionality,
+    .intervals {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      width: 100px;
+    }
+
+    .start,
+    .reset,
+    .increaseSpan,
+    .decreaseSpan {
+      @include custom-button(15px 50px, rgb(0, 0, 0), rgb(255, 251, 251));
+      cursor: pointer;
+    }
+  }
+}
