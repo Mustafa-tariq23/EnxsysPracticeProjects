@@ -1,0 +1,36 @@
+@import "../../Mixins/mixin.scss";
+
+.sortBy {
+  @include flex-center(row, 0, space-between);
+
+  .result {
+    span {
+      color: #000;
+      font-weight: 600;
+    }
+  }
+  .SortOptions {
+    @include flex-center(row, 10px, center);
+    button {
+      @include flex-center(row, 10px, space-between);
+      padding: 8px 15px;
+      background-color: transparent;
+      border: 1px solid #e8e8e8;
+      border-radius: 10px;
+    }
+  }
+}
+.SelectedFilters {
+  @include flex-center(row, 10px, none);
+
+  .buttons {
+    @include flex-center(row, 1rem, center);
+    button {
+      @include flex-center(row, 10px, space-between);
+      padding: 6px 12px;
+      border: 1px solid #e8e8e8;
+      border-radius: 30px;
+      background: transparent;
+    }
+  }
+}

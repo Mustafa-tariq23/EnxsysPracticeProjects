@@ -1,0 +1,115 @@
+.ProductsWrapper {
+  padding: 3rem 0;
+}
+.ProductsWrapper .Card-Parent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 2rem;
+}
+.ProductsWrapper .Card-Parent .cards {
+  list-style: none;
+  border: 1px solid rgba(227, 221, 221, 0.321) !important;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: none;
+  flex-direction: column;
+  gap: 0;
+}
+.ProductsWrapper .Card-Parent .cards:hover {
+  scale: 1.05;
+  transition: all 0.2s ease-in-out;
+}
+.ProductsWrapper .Card-Parent .cards .image {
+  height: 250px;
+  width: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding: 10px 0 20px !important;
+}
+.ProductsWrapper .Card-Parent .cards .ProductInfo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.ProductsWrapper .Card-Parent .cards .ProductInfo .price,
+.ProductsWrapper .Card-Parent .cards .ProductInfo .discount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between !important;
+  width: 100%;
+}
+.ProductsWrapper .Card-Parent .cards .ProductInfo .price .title,
+.ProductsWrapper .Card-Parent .cards .ProductInfo .discount .title {
+  font-weight: 600;
+  color: rgb(128, 127, 127);
+}
+.ProductsWrapper .Card-Parent .cards .ProductInfo .price .id,
+.ProductsWrapper .Card-Parent .cards .ProductInfo .discount .id {
+  color: rgb(175, 173, 173);
+}
+.ProductsWrapper .Card-Parent .cards .ProductInfo .price .strikethrough,
+.ProductsWrapper .Card-Parent .cards .ProductInfo .discount .strikethrough {
+  text-decoration: line-through;
+}
+.ProductsWrapper .Card-Parent .cards .AddToCart {
+  padding: 10px;
+  margin-top: 20px;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 10px;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  border: 1px solid rgb(227, 221, 221);
+  background-color: rgb(244, 244, 244);
+  cursor: pointer;
+}
+.ProductsWrapper .Card-Parent .cards .AddToCart:hover {
+  scale: 1.05;
+  transition: all 0.2s ease-in-out;
+}
+
+.pagination-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  gap: 1rem;
+}
+.pagination-wrapper .pageNumbers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 1rem;
+}
+.pagination-wrapper .pageNumbers .pageButtons {
+  padding: 10px;
+  background-color: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.pagination-wrapper .pageNumbers .currentPage {
+  padding: 10px;
+  background-color: rgb(229, 228, 228);
+  border-radius: 6px;
+  cursor: none;
+}
+.pagination-wrapper .prev,
+.pagination-wrapper .next {
+  background-color: transparent;
+  border: 1px solid rgb(219, 218, 218);
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.pagination-wrapper .disable {
+  background-color: rgb(203, 201, 201);
+  border: 1px solid rgb(219, 218, 218);
+  padding: 10px;
+  border-radius: 6px;
+  cursor: not-allowed;
+}/*# sourceMappingURL=Products.css.map */

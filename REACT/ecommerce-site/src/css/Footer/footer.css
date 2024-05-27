@@ -1,0 +1,180 @@
+.Newsletter-component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4rem;
+  height: auto;
+  padding: 4rem 5rem !important;
+  background-color: white;
+}
+.Newsletter-component .Newsletter-Parent {
+  border-radius: 8px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0;
+  overflow: hidden;
+}
+.Newsletter-component .Newsletter-Parent .images-section {
+  width: 100%;
+  height: 200px;
+  display: flex;
+}
+.Newsletter-component .Newsletter-Parent .images-section .image-container {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 50%;
+}
+.Newsletter-component .Newsletter-Parent .images-section .image-container .image-for-newsletter {
+  height: 700px;
+  width: 100%;
+  position: relative;
+  top: -300px;
+}
+.Newsletter-component .Newsletter-Parent .images-section .text-for-support {
+  width: 50%;
+  height: 200px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 2rem;
+}
+.Newsletter-component .Newsletter-Parent .images-section .text-for-support p {
+  font-size: 12px;
+  color: rgb(177, 176, 176);
+}
+.Newsletter-component .Newsletter-Parent .images-section .text-for-support h1 {
+  color: white;
+  font-size: 2.1rem;
+  font-weight: 500;
+}
+.Newsletter-component .Newsletter-Parent .images-section .text-for-support button {
+  padding: 10px 1rem;
+  border-radius: 8px;
+  background-color: white;
+  color: rgb(177, 176, 176);
+  cursor: pointer;
+}
+.Newsletter-component .Newsletter-Parent .images-section .text-for-support button:hover {
+  background-color: rgb(55, 55, 55);
+  color: white;
+  transition: all 0.2s linear;
+}
+.Newsletter-component .newsletter-section-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0;
+  width: 100%;
+}
+.Newsletter-component .newsletter-section-center .newsletter-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  width: 60%;
+}
+.Newsletter-component .newsletter-section-center .newsletter-section h3 {
+  font-size: 2rem;
+  text-align: center;
+  color: black;
+}
+.Newsletter-component .newsletter-section-center .newsletter-section p {
+  font-size: 14px;
+  color: rgb(184, 184, 184);
+}
+.Newsletter-component .newsletter-section-center .newsletter-section .input-newsletter input {
+  padding: 12px 2rem;
+  background-color: #f4f4f4;
+  border-radius: 6px;
+}
+.Newsletter-component .newsletter-section-center .newsletter-section .input-newsletter button {
+  padding: 12px;
+  background-color: black;
+  color: #f4f4f4;
+  border-radius: 6px;
+}
+.Newsletter-component .newsletter-section-center .newsletter-section .unsubscribe p {
+  text-align: center;
+}
+
+.footer-component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
+  background-color: #f5f4f4;
+  padding: 2rem;
+}
+.footer-component .top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: none;
+  flex-direction: row;
+  gap: 2rem;
+}
+.footer-component .top .left-section {
+  width: 35%;
+}
+.footer-component .top .left-section img {
+  width: 100px;
+  height: 100px;
+  border-radius: 30px;
+  margin-bottom: 1.5rem;
+}
+.footer-component .top .left-section p {
+  color: #b8b8b8;
+}
+.footer-component .top .right-section {
+  display: flex;
+  align-items: center;
+  justify-content: none;
+  flex-direction: row;
+  gap: 4rem;
+  flex: 1;
+  align-self: flex-start;
+  padding: 2rem;
+}
+.footer-component .top .right-section p {
+  color: #b8b8b8;
+}
+.footer-component .top .right-section .section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.footer-component .top .right-section .section .p-tags {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+.footer-component .top .right-section .section-4 {
+  align-self: baseline;
+}
+.footer-component .top .right-section .section-4 .p-tags {
+  flex-direction: row;
+  gap: 1rem;
+}
+.footer-component .bottom {
+  border-top: #b8b8b8 1px solid;
+  width: 97%;
+  text-align: center;
+  padding: 2rem 0 0;
+}/*# sourceMappingURL=footer.css.map */

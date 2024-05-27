@@ -1,0 +1,136 @@
+.mainCart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 0;
+  align-items: none;
+  height: 100vh;
+  width: 400px;
+  overflow: none;
+}
+.mainCart .section1 {
+  width: 100%;
+  padding: 2rem;
+  height: 80%;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.mainCart .section1::-webkit-scrollbar {
+  display: none;
+}
+.mainCart .section1 .closeCart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 0;
+}
+.mainCart .section1 .closeCart h3 {
+  font-size: 1.2rem;
+  color: black;
+  font-weight: bold;
+}
+.mainCart .section1 .closeCart img {
+  cursor: pointer;
+}
+.mainCart .section1 .progressBar .paragraph {
+  text-align: center;
+  padding: 1.5rem 0 0.5rem;
+  font-size: 14px;
+  color: #000;
+}
+.mainCart .section1 .progressBar .bar {
+  width: 100%;
+  height: 12px;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+.mainCart .section1 .progressBar .bar .progress {
+  width: 20%;
+  height: 100%;
+  background-color: #000;
+  border-radius: 20px;
+}
+.mainCart .section1 .mainList .listItem {
+  display: flex;
+  padding: 2rem 1rem;
+}
+.mainCart .section1 .mainList .listItem .img img {
+  height: 100px;
+  width: 100px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.mainCart .section1 .mainList .listItem .item-info {
+  display: flex;
+  align-items: center;
+  justify-content: none;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+.mainCart .section1 .mainList .listItem .item-info .titleAndPrice {
+  display: flex;
+  gap: 1rem;
+}
+.mainCart .section1 .mainList .listItem .item-info .titleAndPrice h2 {
+  font-size: 12px;
+  color: black;
+  font-weight: 900;
+}
+.mainCart .section1 .mainList .listItem .item-info .titleAndPrice p {
+  color: black;
+  font-weight: 700;
+}
+.mainCart .section1 .mainList .listItem .item-info .quantity {
+  display: flex;
+  gap: 20px;
+}
+.mainCart .section1 .mainList .listItem .item-info .quantity .increaseOrDecrease {
+  display: flex;
+  align-items: center;
+  justify-content: none;
+  flex-direction: row;
+  gap: 15px;
+  padding: 15px;
+}
+.mainCart .section1 .mainList .listItem .item-info .quantity .increaseOrDecrease button {
+  padding: 8px 14px;
+  border-radius: 999px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+.mainCart .section1 .mainList .listItem .item-info .quantity .delete {
+  background-color: transparent;
+}
+.mainCart .footer {
+  width: 100%;
+  padding: 0 2rem 2rem;
+}
+.mainCart .footer .upperSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 0;
+  padding: 3rem 0;
+}
+.mainCart .footer .upperSection h3 {
+  color: #000;
+}
+.mainCart .footer .checkout {
+  text-align: center;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  padding: 12px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.mainCart .footer .checkout:hover {
+  scale: 1.05;
+  transition: all 0.2s cubic-bezier(0.515, 0.31, 0.555, 0.5);
+}/*# sourceMappingURL=cart.css.map */

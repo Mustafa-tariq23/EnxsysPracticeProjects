@@ -1,0 +1,140 @@
+@import "../Mixins/mixin.scss";
+
+.mainCart {
+  @include flex-center(column, 0, space-between);
+  align-items: none;
+  height: 100vh;
+  width: 400px;
+  overflow: none;
+
+  .section1 {
+    width: 100%;
+    padding: 2rem;
+    height: 80%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    // Close Cart
+    .closeCart {
+      @include flex-center(row, 0, space-between);
+
+      h3 {
+        font-size: 1.2rem;
+        color: black;
+        font-weight: bold;
+      }
+      img {
+        cursor: pointer;
+      }
+    }
+
+    // Progress Bar
+
+    .progressBar {
+      .paragraph {
+        text-align: center;
+        padding: 1.5rem 0 0.5rem;
+        font-size: 14px;
+        color: #000;
+      }
+      .bar {
+        width: 100%;
+        // background-color: blue;
+        height: 12px;
+        border: 1px solid black;
+        border-radius: 20px;
+
+        .progress {
+          width: 20%;
+          height: 100%;
+          background-color: #000;
+          border-radius: 20px;
+        }
+      }
+    }
+
+    // list
+
+    .mainList {
+      .listItem {
+        display: flex;
+        padding: 2rem 1rem;
+        .img {
+          img {
+            height: 100px;
+            width: 100px;
+            object-fit: contain;
+          }
+        }
+        .item-info {
+          @include flex-center(column, 10px, none);
+          align-items: flex-start;
+
+          .titleAndPrice {
+            display: flex;
+            gap: 1rem;
+            h2 {
+              font-size: 12px;
+              color: black;
+              font-weight: 900;
+            }
+            p {
+              color: black;
+              font-weight: 700;
+            }
+          }
+
+          .quantity {
+            display: flex;
+            gap: 20px;
+
+            .increaseOrDecrease {
+              @include flex-center(row, 15px, none);
+              padding: 15px;
+              button {
+                padding: 8px 14px;
+                border-radius: 999px;
+                background-color: black;
+                color: white;
+                cursor: pointer;
+              }
+            }
+            .delete {
+              background-color: transparent;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    width: 100%;
+    padding: 0 2rem 2rem;
+    .upperSection {
+      @include flex-center(row, 0, space-between);
+      padding: 3rem 0;
+      h3 {
+        color: #000;
+      }
+    }
+
+    .checkout {
+      text-align: center;
+      width: 100%;
+      background-color: rgb(0, 0, 0);
+      color: white;
+      padding: 12px;
+      border-radius: 30px;
+      cursor: pointer;
+      &:hover {
+        scale: 1.05;
+        transition: all 0.2s cubic-bezier(0.515, 0.31, 0.555, 0.5);
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@import "../../Mixins/mixin.scss";
+
+.main-parent {
+  padding: 10px;
+  .parent-category {
+    border: 1px solid rgb(243, 243, 243);
+    border-radius: 10px;
+    box-shadow: 0.9px 0.9px 0.9px 0.9px #dedfdd;
+    list-style: none;
+    .child-categories {
+      @include flex-center(row, 4rem, space-between);
+      border-top: 1px solid rgb(243, 243, 243);
+      padding: 10px 20px;
+      cursor: pointer;
+      color: rgb(116, 114, 114);
+    }
+    .grandChild {
+      .innerChild {
+        @include flex-center(row, 4rem, space-between);
+        border-top: 1px solid rgb(243, 243, 243);
+        padding: 10px 30px;
+        cursor: pointer;
+        color: rgb(116, 114, 114);
+      }
+      .innerChild2{
+        .inputs{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px 40px;
+
+          .indivisualInput{
+            display: flex;
+            gap: 10px;
+            p{
+              font-size: 14px;
+            }
+          }
+
+          .quantity{
+            background-color: rgba(232, 232, 232, 0.852);
+            border-radius: 30px;
+            padding: 2px;
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+}

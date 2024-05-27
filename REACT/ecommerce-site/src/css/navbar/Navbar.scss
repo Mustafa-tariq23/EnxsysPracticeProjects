@@ -1,0 +1,76 @@
+@import "../Mixins/mixin.scss";
+
+.navbar {
+  @include flex-center(row, 0, space-between);
+  width: 100%;
+  padding: 0 5rem;
+
+  // logo
+  .logo img {
+    width: 100px;
+  }
+
+  // navOptions
+
+  .navOptions .list {
+    @include flex-center(row, 2rem, center);
+    list-style: none;
+    color: #626161;
+    .listItems {
+      cursor: pointer;
+    }
+    .listItems-1 {
+      @include flex-center(row, 10px, center);
+    }
+  }
+
+  // search and cart
+
+  .searchAndCart {
+    @include flex-center(row, 2rem, center);
+
+    // search
+    .search {
+      @include flex-center(row, 10px, center);
+      background-color: rgba(238, 236, 236, 0.764);
+      padding: 0 10px;
+      border-radius: 10px;
+      input {
+        background-color: rgba(238, 236, 236, 0.764);
+        padding: 10px 0;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    .cart{
+      cursor: pointer;
+    }
+  }
+
+  .hamburger {
+    transition: all 0.3s linear;
+    cursor: pointer;
+    display: none;
+  }
+}
+
+// responsive
+
+@media (max-width: 1024px) {
+  .navbar .navOptions {
+    display: none;
+  }
+  .navbar .hamburger {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: space-between;
+    .searchAndCart {
+      display: none;
+    }
+  }
+}

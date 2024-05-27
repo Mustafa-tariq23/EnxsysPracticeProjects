@@ -1,0 +1,116 @@
+@import "../../Mixins/mixin.scss";
+
+.ProductsWrapper {
+  padding: 3rem 0;
+  .Card-Parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2rem;
+    .cards {
+      list-style: none;
+      border: 1px solid rgba(227, 221, 221, 0.321) !important;
+      border-radius: 10px;
+      padding: 10px;
+      @include flex-center(column, 0, none);
+      &:hover{
+          scale: 1.05;
+          transition: all .2s ease-in-out;
+        }
+      .image {
+        height: 250px;
+        width: 200px;
+        object-fit: contain;
+        padding: 10px 0 20px !important;
+      }
+
+      .ProductInfo {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .price,
+        .discount {
+          display: flex;
+          align-items: center;
+          justify-content: space-between !important;
+          width: 100%;
+          .title {
+            font-weight: 600;
+            color: rgb(128, 127, 127);
+          }
+
+          .id {
+            color: rgb(175, 173, 173);
+          }
+          .strikethrough {
+            text-decoration: line-through;
+          }
+        }
+      }
+      .AddToCart {
+        padding: 10px;
+        margin-top: 20px;
+        width: 100%;
+        background-color: transparent;
+        // color: white;
+        border-radius: 10px;
+        backdrop-filter: blur(20px);
+        border: 1px solid rgb(227, 221, 221);
+        background-color: rgb(244, 244, 244);
+        cursor: pointer;
+        &:hover{
+          scale: 1.05;
+          transition: all .2s ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+.pagination-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  gap: 1rem;
+
+  .pageNumbers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 1rem;
+
+    .pageButtons {
+      padding: 10px;
+      background-color: transparent;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .currentPage {
+      padding: 10px;
+      background-color: rgb(229, 228, 228);
+      border-radius: 6px;
+      cursor: none;
+    }
+  }
+
+  .prev,
+  .next {
+    background-color: transparent;
+    border: 1px solid rgb(219, 218, 218);
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .disable {
+    background-color: rgb(203, 201, 201);
+    border: 1px solid rgb(219, 218, 218);
+    padding: 10px;
+    border-radius: 6px;
+    cursor: not-allowed;
+  }
+}

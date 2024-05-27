@@ -1,0 +1,22 @@
+@import '../Mixins/mixin.scss';
+@import './AppliedFilters/AppliedFilters.scss';
+@import './Products/Products.scss';
+@import './Sorting/Sorting.scss';
+
+.Main-Parent{
+  @include flex-center(row, 2rem, space-between);
+  padding: 1rem 5rem;
+
+  position: relative;
+
+  .filters{
+    align-self: baseline;
+    position: sticky;
+    top: 0;
+  }
+
+  .products{
+    flex: 1;
+    align-self: baseline;
+  }
+}

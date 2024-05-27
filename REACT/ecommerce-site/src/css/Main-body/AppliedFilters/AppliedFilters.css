@@ -1,0 +1,55 @@
+.sortBy {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 0;
+}
+.sortBy .result span {
+  color: #000;
+  font-weight: 600;
+}
+.sortBy .SortOptions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+}
+.sortBy .SortOptions button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 10px;
+  padding: 8px 15px;
+  background-color: transparent;
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+}
+
+.SelectedFilters {
+  display: flex;
+  align-items: center;
+  justify-content: none;
+  flex-direction: row;
+  gap: 10px;
+}
+.SelectedFilters .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 1rem;
+}
+.SelectedFilters .buttons button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 10px;
+  padding: 6px 12px;
+  border: 1px solid #e8e8e8;
+  border-radius: 30px;
+  background: transparent;
+}/*# sourceMappingURL=AppliedFilters.css.map */

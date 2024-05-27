@@ -1,0 +1,18 @@
+@import '../Mixins/mixin.scss';
+
+.BreadCrums {
+  @include flex-center(row, 1rem, flex-start);
+  padding: 0 5rem;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+
+  .Home,
+  .indicator {
+    color: #a6b1bd;
+    font-weight: 500;
+  }
+  .Browse {
+    color: #7a8490;
+    font-weight: 500;
+  }
+}
