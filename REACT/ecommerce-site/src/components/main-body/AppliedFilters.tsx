@@ -11,7 +11,7 @@ const AppliedFilters = () => {
         <div className="SortOptions">
           <p>Sort by</p>
           <button type="button">
-            Popularity <img src="src/assets/chevron-down.png" alt="down" />
+            Popularity <img src="/assets/chevron-down.png" alt="down" />
           </button>
         </div>
       </div>
@@ -19,13 +19,13 @@ const AppliedFilters = () => {
         <p>Applied Filters: </p>
         <div className="buttons">
           <button>
-            Top <img src="src/assets/x.png" alt="x" />
+            Top <img src="/assets/x.png" alt="x" />
           </button>
           <button>
-            $20 - $100 <img src="src/assets/x.png" alt="x" />
+            $20 - $100 <img src="/assets/x.png" alt="x" />
           </button>
           <button>
-            Medium <img src="src/assets/x.png" alt="x" />
+            Medium <img src="/assets/x.png" alt="x" />
           </button>
         </div>
       </div>

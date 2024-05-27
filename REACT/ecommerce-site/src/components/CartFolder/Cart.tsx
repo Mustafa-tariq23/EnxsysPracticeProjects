@@ -27,7 +27,7 @@ const Cart: React.FC<CartProps> = ({ closeCart }) => {
       <div className="section1">
         <div className="closeCart">
           <h3>Cart</h3>
-          <img src="src/assets/x.png" alt="X" onClick={closeCart} />
+          <img src="/assets/x.png" alt="X" onClick={closeCart} />
         </div>
 
         <div className="progressBar">

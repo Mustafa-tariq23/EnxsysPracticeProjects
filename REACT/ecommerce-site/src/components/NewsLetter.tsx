@@ -8,7 +8,7 @@ const NewsLetter = () => {
         <section className="images-section">
           <div className="image-container">
             <img
-              src="src/assets/Vintage.jpg"
+              src="/assets/Vintage.jpg"
               alt="image"
               className="image-for-newsletter"
             />

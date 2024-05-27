@@ -10,7 +10,7 @@ const Footer = () => {
         <section className="top">
           {/* left section */}
           <div className="left-section">
-            <img src="src/assets/logo.jpg" alt="logo" />
+            <img src="/assets/logo.jpg" alt="logo" />
             <p>
               Specializes in providing high quality, stulish products for your
               wardrobe

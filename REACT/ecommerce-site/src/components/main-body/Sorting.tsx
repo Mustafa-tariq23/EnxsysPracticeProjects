@@ -18,18 +18,18 @@ const Sorting = () => {
         <li className="child-categories" onClick={() => toggleCategory(0)}>
           <p>Category</p>
           {open[0] ? (
-            <img src="src/assets/chevron-right.png" alt="chevron right" />
+            <img src="/assets/chevron-right.png" alt="chevron right" />
           ) : (
-            <img src="src/assets/chevron-down.png" alt="chevron down" />
+            <img src="/assets/chevron-down.png" alt="chevron down" />
           )}
         </li>
         <ul className="grandChild">
           <li className="innerChild">
             <p>Women</p>
             {open[0] ? (
-              <img src="src/assets/chevron-right.png" alt="chevron right" />
+              <img src="/assets/chevron-right.png" alt="chevron right" />
             ) : (
-              <img src="src/assets/chevron-down.png" alt="chevron down" />
+              <img src="/assets/chevron-down.png" alt="chevron down" />
             )}
           </li>
           <ul className="innerChild2">
@@ -61,58 +61,58 @@ const Sorting = () => {
           <li className="innerChild">
             <p>Men</p>
             {open[0] ? (
-              <img src="src/assets/chevron-right.png" alt="chevron right" />
+              <img src="/assets/chevron-right.png" alt="chevron right" />
             ) : (
-              <img src="src/assets/chevron-down.png" alt="chevron down" />
+              <img src="/assets/chevron-down.png" alt="chevron down" />
             )}
           </li>
           <li className="innerChild">
             <p>Kids</p>
             {open[0] ? (
-              <img src="src/assets/chevron-right.png" alt="chevron right" />
+              <img src="/assets/chevron-right.png" alt="chevron right" />
             ) : (
-              <img src="src/assets/chevron-down.png" alt="chevron down" />
+              <img src="/assets/chevron-down.png" alt="chevron down" />
             )}
           </li>
           <li className="innerChild">
             <p>Sports</p>
             {open[0] ? (
-              <img src="src/assets/chevron-right.png" alt="chevron right" />
+              <img src="/assets/chevron-right.png" alt="chevron right" />
             ) : (
-              <img src="src/assets/chevron-down.png" alt="chevron down" />
+              <img src="/assets/chevron-down.png" alt="chevron down" />
             )}
           </li>
           <li className="innerChild">
             <p>Casual</p>
             {open[0] ? (
-              <img src="src/assets/chevron-right.png" alt="chevron right" />
+              <img src="/assets/chevron-right.png" alt="chevron right" />
             ) : (
-              <img src="src/assets/chevron-down.png" alt="chevron down" />
+              <img src="/assets/chevron-down.png" alt="chevron down" />
             )}
           </li>
         </ul>
         <li className="child-categories" onClick={() => toggleCategory(1)}>
           <p>Brands</p>
           {open[1] ? (
-            <img src="src/assets/chevron-right.png" alt="chevron right" />
+            <img src="/assets/chevron-right.png" alt="chevron right" />
           ) : (
-            <img src="src/assets/chevron-down.png" alt="chevron down" />
+            <img src="/assets/chevron-down.png" alt="chevron down" />
           )}
         </li>
         <li className="child-categories" onClick={() => toggleCategory(2)}>
           <p>Price</p>
           {open[2] ? (
-            <img src="src/assets/chevron-right.png" alt="chevron right" />
+            <img src="/assets/chevron-right.png" alt="chevron right" />
           ) : (
-            <img src="src/assets/chevron-down.png" alt="chevron down" />
+            <img src="/assets/chevron-down.png" alt="chevron down" />
           )}
         </li>
         <li className="child-categories" onClick={() => toggleCategory(3)}>
           <p>Size</p>
           {open[3] ? (
-            <img src="src/assets/chevron-right.png" alt="chevron right" />
+            <img src="/assets/chevron-right.png" alt="chevron right" />
           ) : (
-            <img src="src/assets/chevron-down.png" alt="chevron down" />
+            <img src="/assets/chevron-down.png" alt="chevron down" />
           )}
         </li>
       </ul>
