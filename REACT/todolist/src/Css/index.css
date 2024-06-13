@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 10svh;
+}
+header h1 {
+  font-size: 1.5rem;
+}
+header button {
+  background-color: rgba(241, 237, 237, 0.4470588235);
+  color: 1D232A;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.app-light {
+  background-color: rgba(241, 237, 237, 0.2235294118);
+  height: 100svh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.app-light header {
+  color: 1D232A;
+  background-color: rgba(241, 237, 237, 0.4470588235);
+}
+.app-light button {
+  background-color: #1d232a;
+  color: #f0f0f0;
+}
+.app-light .taskInput form {
+  display: flex;
+  width: 100%;
+  padding: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.app-light .taskInput form input {
+  height: 30px;
+  border-radius: 0.5rem;
+  padding: 10px;
+  background-color: #2e3742;
+  color: #fff;
+}
+.app-light .taskInput form button {
+  background-color: #1d232a;
+  color: rgba(241, 237, 237, 0.6745098039);
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.app-light .task-list {
+  padding: 10px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.app-light .task-list .indivisual-task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background-color: rgba(181, 181, 181, 0.631372549);
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #2e3742;
+}
+.app-light .task-list .indivisual-task span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.app-light .task-list .indivisual-task span input {
+  cursor: pointer;
+}
+.app-light .task-list .indivisual-task button {
+  background-color: rgb(236, 61, 61);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.app-dark {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #1d232a;
+  height: 100svh;
+}
+.app-dark header {
+  color: #f0f0f0;
+  background-color: #2e3742;
+}
+.app-dark .taskInput form {
+  display: flex;
+  width: 100%;
+  padding: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.app-dark .taskInput form input {
+  height: 30px;
+  border-radius: 0.5rem;
+  padding: 10px;
+}
+.app-dark .taskInput form button {
+  background-color: rgba(241, 237, 237, 0.4470588235);
+  color: 1D232A;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.app-dark .task-list {
+  padding: 10px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.app-dark .task-list .indivisual-task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background-color: #2e3742;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: white;
+}
+.app-dark .task-list .indivisual-task span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.app-dark .task-list .indivisual-task span input {
+  cursor: pointer;
+}
+.app-dark .task-list .indivisual-task button {
+  background-color: rgb(236, 61, 61);
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+}/*# sourceMappingURL=index.css.map */

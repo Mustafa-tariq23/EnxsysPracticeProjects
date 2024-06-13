@@ -1,35 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useSelector } from "react-redux";
+import { useTheme } from "./Context/ThemeContext";
+import { RootState } from "./state/store";
+import TaskInput from "./screens/TaskInput";
+import TaskList from "./screens/TaskList";
+import "./Css/index.css";
 
-function App() {
-  const [count, setCount] = useState(0)
+const App: React.FC = () => {
+  const { theme, toggleTheme } = useTheme();
+  const tasks = useSelector((state: RootState) => state.tasks);
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+    <div className={`app-${theme}`}>
+      <header>
+        <h1>Task Manager</h1>
+        <div>Task Count : {tasks.length}</div>
+        <button onClick={toggleTheme}>
+          Switch to {theme === "light" ? "Dark" : "Light"} Mode
         </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+      </header>
+      <TaskInput />
+      <TaskList />
+    </div>
+  );
+};
 
-export default App
+export default App;
