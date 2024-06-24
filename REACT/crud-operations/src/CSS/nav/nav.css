@@ -1,0 +1,30 @@
+@import '../index.css';
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10rem;
+  padding: 2.5rem;
+}
+
+nav .title {
+  cursor: pointer;
+}
+
+nav .ListView {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+  cursor: pointer;
+}
+
+.listItem:hover{
+  color: rgb(133, 133, 133);
+  transition: all.2s ease-in-out;
+}
+
+/*# sourceMappingURL=nav.css.map */

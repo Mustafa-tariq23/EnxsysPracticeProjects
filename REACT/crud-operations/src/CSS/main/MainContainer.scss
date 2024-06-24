@@ -1,0 +1,155 @@
+@import "../index.css";
+@import "../mixin/flex.scss";
+
+.main-container{
+  @include flex-center(column, flex-start, flex-start);
+  min-height: 80svh;
+  max-height: auto;
+  padding: 1.5rem;
+
+  .openModal{
+    align-self: center;
+    padding: 12px;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    margin: 1rem 0 1.5rem;
+  }
+
+
+  .List{
+    .ListItems{
+      list-style: none;
+      margin: .8rem 0;
+      padding: 8px;
+      background-color: rgba(215, 215, 215, 0.481);
+      border-radius: 8px;
+      @include flex-center();
+      justify-content: space-between;
+      gap: 5rem;
+      
+      h2{
+        padding: 8px 0 1rem 0;
+        color: rgba(33, 32, 32, 0.869);
+      }
+
+      p{
+        font-size: 1rem;
+        font-weight: 400;
+        color: #767474;
+      }
+
+      // crud
+
+      .crudOptions{
+        display: flex;
+        gap: 12px;
+
+        button{
+          padding: 8px;
+          background-color: black;
+          color: white;
+          border-radius: 8px;
+        }
+      }
+    }
+  }
+}
+
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+
+  // close button
+  .close{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    button{
+      padding: 10px 14px;
+      border-radius: 50%;
+      background-color: black;
+      color: white;
+
+      &:hover{
+        background-color: rgb(40, 40, 40);
+        transition: all .2s ease-in-out;
+      }
+    }
+  }
+
+  // form
+
+  .form{
+
+    input, textarea{
+      border: 1px solid black;
+      border-radius: 4px;
+      margin: 0 0 12px 0;
+      padding: 6px
+    }
+
+    .title{
+      @include flex-center(column);
+    }
+
+    .content{
+      @include flex-center(column);
+      textarea{
+        min-width: 100%;
+        max-width: fit-content;
+      }
+    }
+
+    button{
+      text-align: center;
+      width: 100%;
+      border-radius: 8px;
+      margin: 10px 0;
+      padding: 6px;
+      background-color: black;
+      color: white;
+
+      &:hover{
+        background-color: rgb(40, 40, 40);
+        transition: all .2s ease-in-out;
+      }
+    }
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

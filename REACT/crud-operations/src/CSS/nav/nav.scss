@@ -1,0 +1,17 @@
+@import '../index.css';
+@import '../mixin/flex.css';
+
+nav{
+  @include flex-center(row, center, space-between);
+  padding: 2.5rem;
+  .ListView{
+    @include flex-center();
+    list-style: none;
+    gap: 2.5rem;
+    cursor: pointer;
+    &:hover {
+      color: rgba(215, 215, 215, 0.481);
+      transition: all.2s ease-in-out;
+    }
+  }
+}
